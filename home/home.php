@@ -18,7 +18,15 @@
         <h2 class="intro subtitle">Redesenhada</h2>
     </div>
 
-    <div class="module second"></div>
+    <div class="module second">
+        <h3>Lorem <span class="text-color-white">Ipsum</span></h3>
+        <p class="intro-paragraph">
+            Donec accumsan libero tellus, eget maximus est auctor ac. Vestibulum fermentum, elit vel imperdiet dignissim, sem orci condimentum leo, eu ultrices leo tellus tristique ante.
+        </p>
+        <p class="intro-paragraph">
+        Curabitur commodo fringilla felis at auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        </p>
+    </div>
 
 
     <div class="vestibulares-presentation">
@@ -30,14 +38,12 @@
 
         </div>
 
-        <button class="buttons-vest">
-
-        </button>
+        <button class="buttons-vest">Acesse</button>
     </div>
 
     <div class="famous-pictures-container">
-    <!-- tres quadro em um carrosel, semelhante ao modelo do egito, informacoes aparecem com um slide-up vindo de baixo no quadro selecionado-->
-    
+        <!-- tres quadro em um carrosel, semelhante ao modelo do egito, informacoes aparecem com um slide-up vindo de baixo no quadro selecionado-->
+
     </div>
 
 </body>
