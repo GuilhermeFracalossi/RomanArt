@@ -6,25 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RomanArt - Home</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,900|Playfair+Display:400,700,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <?php
-    include "menu.php";
+    include "../menu.php";
     ?>
-    <div class="intro">
-        <h1 class="intro title">A arte romana</h1>
-        <h2 class="intro subtitle">Redesenhada</h2>
+    <!--div class="background-colosseum"></div-->
+    <div class="intro-container">
+        <h1 class="intro-title">A arte romana</h1>
+        <h2 class="intro-subtitle">Redesenhada</h2>
+
+        <div class="scroll-info">
+            <img src="scroll-icon.png" alt="">
+            <small>Scroll</small>
+        </div>
     </div>
 
-    <div class="module second">
-        <h3>Lorem <span class="text-color-white">Ipsum</span></h3>
+    <div class="second-intro">
+        <h3 class="title-sec-intro">Lorem <span class="text-color-white">Ipsum</span></h3>
         <p class="intro-paragraph">
             Donec accumsan libero tellus, eget maximus est auctor ac. Vestibulum fermentum, elit vel imperdiet dignissim, sem orci condimentum leo, eu ultrices leo tellus tristique ante.
         </p>
         <p class="intro-paragraph">
-        Curabitur commodo fringilla felis at auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            Curabitur commodo fringilla felis at auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
         </p>
     </div>
 
