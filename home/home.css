@@ -3,18 +3,18 @@ font-family: 'Playfair Display', serif;
 font-family: 'Merriweather', serif;
 
 */
-*{
+* {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-.intro-container{
+.intro-container {
     width: 100%;
     height: 100vh;
     position: relative;
     margin: 0px;
-      
+
     padding: 20vh 20px 30px 20px;
 
     background: url('images/introRed4.jpg');
@@ -24,36 +24,41 @@ font-family: 'Merriweather', serif;
 }
 
 
-.intro-title, .intro-subtitle{
+.intro-title,
+.intro-subtitle {
     text-align: center;
     color: #f2f2f2;
 
 }
-.intro-title{
+
+.intro-title {
     font-size: 70px;
     font-family: 'Playfair Display', serif;
     font-weight: 700;
 }
-.intro-subtitle{
+
+.intro-subtitle {
     font-size: 45px;
     font-family: 'Playfair Display', serif;
     font-weight: 400;
 }
 
-.scroll-info{
+.scroll-info {
     height: 70px;
-    
+
     margin: 05% 50% 10px 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
-.scroll-info small{
+
+.scroll-info small {
     color: white;
     font-size: 15px;
 }
-.scroll-info img{
+
+.scroll-info img {
     height: 40px;
     width: 40px;
 
@@ -100,28 +105,28 @@ font-family: 'Merriweather', serif;
 
 
 
-.arq-esc-screen{
+.arq-esc-screen {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #b52438;
 }
-.arq-esc-screen text{
-    margin-top: 30px;
-}
-.arq-esc-screen h2{
+
+.arq-esc-screen h2 {
     font-size: 40px;
     font-weight: 900;
     margin-bottom: 30px;
     color: white;
     font-family: 'Playfair Display', serif;
 }
-.arq-esc-screen p{
+
+.arq-esc-screen p {
     font-size: 17px;
     color: white;
     font-family: 'Poppins', sans-serif;
     text-align: justify;
 }
-.arquitetura-screen{
+
+.arquitetura-screen {
     display: flex;
     align-items: center;
     margin: auto;
@@ -130,14 +135,23 @@ font-family: 'Merriweather', serif;
     padding: 20px 15px 0px 15px;
 
 
+
 }
-.arquitetura-screen img{
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.arquitetura-screen .picture {
     width: 600px;
 }
 
 
-.escultura-screen{
+.escultura-screen {
     display: flex;
+    align-items: center;
     width: 100%;
     padding: 30px 15px;
     margin: auto;
@@ -146,11 +160,13 @@ font-family: 'Merriweather', serif;
     padding: 0px 15px 20px 15px;
 
 }
-.escultura-screen .text{
+
+.escultura-screen .text {
     margin-top: 30px;
 }
-.escultura-screen img{
-    height: 400px;
+
+.escultura-screen .picture {
+    width: 400px;
     margin-left: 30px;
 }
 
@@ -158,10 +174,80 @@ font-family: 'Merriweather', serif;
 
 
 
+.access-button {
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    width: 200px;
+    height: 70px;
+    width: 70px;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 50%;
+    margin-top: 10px;
+    box-shadow: 0px 0px 0px 13px rgba(255, 255, 255, 0.3);
+
+}
+.access-button img{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.access-button .button-img1{
+    width: 30px;
+}
+.access-button .button-img2{
+    width: 40px;
+    opacity: 0;
+}
+.access-button:hover > .button-img1{
+    opacity: 0;
+    transition: 0.4s;
+}
+.access-button:hover > .button-img2{
+    opacity: 1;
+    transition: 0.4s;
+}
 
 
-.vestibulares-screen{
+.vestibulares-screen {
     width: 100%;
     height: 100vh;
     background-color: #f5b038;
+    padding: 30px 20px;
+    
+}
+
+.vestibulares-screen h2 {
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.vestibulares-screen h3{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+.icons-vestib-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 90%;
+    max-width: 1500px;
+    margin:30px auto 30px auto;
+}
+.icons-vestib-container img{
+    height: 170px;
+
 }

@@ -43,25 +43,27 @@
 
     <div class="arq-esc-screen">
         <div class="arquitetura-screen">
-            <img src="images/testearquitetura.png" alt="">
+            <img class="picture" src="images/testearquitetura.png" alt="">
 
             <div class="text arquitetura">
                 <h2>Arquitetura</h2>
                 <p></p>
+                <a href="../arquitetura/arquitetura.php"><button class="access-button"> <img class="button-img1" src="images/next.svg" alt=""><img class="button-img2" src="images/pilar.svg" alt=""></button></a>
             </div>
 
-            
+
         </div>
 
         <div class="escultura-screen">
-    
+
             <div class="text esculturas">
                 <h2>Esculturas</h2>
                 <p></p>
+                <a href="../esculturas/esculturas.php"><button class="access-button"> <img class="button-img1" src="images/next.svg" alt=""><img class="button-img2" src="images/escultura.svg" alt=""></button></a>
             </div>
-            <img src="images/escultura.png" alt="">
+            <img class="picture" src="images/escultura.png" alt="">
 
-            
+
         </div>
 
     </div>
@@ -71,7 +73,10 @@
         <h3>Separado do jeito que você precisa</h3>
 
         <div class="icons-vestib-container">
-            <img src="" alt="">
+            <img src="images/enem.png" alt="">
+            <img src="images/ufsc.png" alt="">
+            <img src="images/usp.png" alt="">
+            <img src="images/ufrgs.png" alt="">
 
         </div>
 
@@ -90,25 +95,37 @@
 
 
 <script>
-  
     $.ajax({
         url: "text.json",
         type: "POST"
-    }).done(function(response){
+    }).done(function(response) {
         fillTexts(response)
-        
+
     })
 
-    function fillTexts(textos){
-        $textoArquitetura =  textos['home']['paragrafoArquitetura']
-        $('.text.arquitetura p').html($textoArquitetura)
+    function fillTexts(textos) {
+        var textoArquitetura = textos['home']['paragrafoArquitetura']
+        $('.text.arquitetura p').html(textoArquitetura)
 
-        $textoEsculturas =  textos['home']['paragrafoEsculturas']
-        $('.text.esculturas p').html($textoEsculturas)
-        
+        var textoEsculturas = textos['home']['paragrafoEsculturas']
+        $('.text.esculturas p').html(textoEsculturas)
+
     }
 
-    
+
+    // function changeButtonIcon() {
+    //     $('.access-button').mouseover(function(){
+    //         console.log('entra')
+    //     })
+    //     $('.access-button').mouseout(function(){
+    //         console.log('sai')
+    //     })
+    // }
+
+    // $(function() {
+    //     changeButtonIcon()
+    //     console.log('oi')
+    // })
 </script>
 
 </html>
