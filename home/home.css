@@ -3,9 +3,12 @@ font-family: 'Playfair Display', serif;
 font-family: 'Merriweather', serif;
 
 */
-.background-colosseum{
-    
+*{
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
 .intro-container{
     width: 100%;
     height: 100vh;
@@ -14,7 +17,7 @@ font-family: 'Merriweather', serif;
       
     padding: 20vh 20px 30px 20px;
 
-    background: url('testeintrored4.jpg');
+    background: url('testeintrored5.jpg');
     background-position: center;
     background-size: cover;
     z-index: -1;

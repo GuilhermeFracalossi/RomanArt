@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,900|Playfair+Display:400,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <style>
-    .menu-container{
+    .menu-container {
         position: absolute;
         width: 100%;
-        height: 70px;
+        height: 75px;
         margin: 0px;
         display: flex;
         justify-content: space-between;
@@ -21,55 +22,90 @@
 
     }
 
-    .menu-options{
-        width: 500px;
+    .logo-container {
+        height: 50px;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    .logo-container img {
+        height: 60px;
+        width: 60px;
+        display: block;
+        z-index: 100;
+    }
+
+    .logo-container h3 {
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        margin: 0px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .menu-options {
+        width: 600px;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        
+
     }
-    .menu-options a{
+
+    .menu-options a {
         padding: 5px;
         text-decoration: none;
         font-size: 19px;
         font-weight: 700;
         font-family: 'Merriweather', serif;
     }
-    .homeMenu{
+
+    .practice-button {
+        background: #1d8cf8;
+        background-image: linear-gradient(to bottom left, #1d8cf8, #3358f4, #1d8cf8);
+        background-size: 210% 210%;
+        background-position: 100% 0;
+        background-color: #1d8cf8;
+        box-shadow: none;
+        color: #fff;
+       
+        padding: 5px 15px !important;
+        border-radius: 6px;
+    }
+
+    .homeMenu {
         background-color: transparent;
 
     }
-    
-    .homeMenu .menu-options a{
+
+    .homeMenu .menu-options a {
         color: white;
-        
+
 
     }
 
-    .defaultMenu{
-
-    }
-    
-    
-
-
+    .defaultMenu {}
 </style>
+
 <body>
 
-    
-<div class="menu-container homeMenu">
-    <div class="logo-container">
-        <img src="logo.png" alt="">
-    </div>
-    <div class="menu-options">
-        <a href="arquitetura/arquitetura.php">Arquitetura</a>
-        <a href="pinturas/pinturas.php">Pinturas</a>
-        <a href="esculturas/esculturas.php">Esculturas</a>
 
-        <a class="practice-button" href="pratique/pratique.php">Pratique</a>
+    <div class="menu-container homeMenu">
+        <div class="logo-container">
+            <img src="../logo-icon-white.png" alt="">
+            <h3>Artistory</h3>
+        </div>
+        <div class="menu-options">
+            <a href="../arquitetura/arquitetura.php">Arquitetura</a>
+            <a href="../pinturas/pinturas.php">Pinturas</a>
+            <a href="../esculturas/esculturas.php">Esculturas</a>
+
+            <a class="practice-button" href="../pratique/pratique.php">Pratique</a>
+        </div>
     </div>
-</div>
 
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
