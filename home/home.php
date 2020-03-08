@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="home.css">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,900|Playfair+Display:400,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -26,23 +27,51 @@
         </div>
     </div>
 
-    <div class="second-intro">
-        <h3 class="title-sec-intro">Lorem <span class="text-color-white">Ipsum</span></h3>
-        <p class="intro-paragraph">
-            Donec accumsan libero tellus, eget maximus est auctor ac. Vestibulum fermentum, elit vel imperdiet dignissim, sem orci condimentum leo, eu ultrices leo tellus tristique ante.
-        </p>
-        <p class="intro-paragraph">
-            Curabitur commodo fringilla felis at auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-        </p>
+    <!-- <div class="second-screen">
+        <h3 class="sec-screen-title">Lorem <span class="text-color-white">Ipsum</span></h3>
+        <div class="text-flex">
+
+            <p class="sec-screen-paragraph">
+                Donec accumsan libero tellus, eget maximus est auctor ac. Vestibulum fermentum, elit vel imperdiet dignissim, sem orci condimentum leo, eu ultrices leo tellus tristique ante.
+            </p>
+            <p class="sec-screen-paragraph">
+                Curabitur commodo fringilla felis at auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            </p>
+        </div>
+
+    </div> -->
+
+    <div class="arq-esc-screen">
+        <div class="arquitetura-screen">
+            <img src="images/testearquitetura.png" alt="">
+
+            <div class="text arquitetura">
+                <h2>Arquitetura</h2>
+                <p></p>
+            </div>
+
+            
+        </div>
+
+        <div class="escultura-screen">
+    
+            <div class="text esculturas">
+                <h2>Esculturas</h2>
+                <p></p>
+            </div>
+            <img src="images/escultura.png" alt="">
+
+            
+        </div>
+
     </div>
 
-
-    <div class="vestibulares-presentation">
+    <div class="vestibulares-screen">
         <h2>Conteúdo dos principais vestibulares</h2>
         <h3>Separado do jeito que você precisa</h3>
 
         <div class="icons-vestib-container">
-
+            <img src="" alt="">
 
         </div>
 
@@ -60,6 +89,26 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 
-<script></script>
+<script>
+  
+    $.ajax({
+        url: "text.json",
+        type: "POST"
+    }).done(function(response){
+        fillTexts(response)
+        
+    })
+
+    function fillTexts(textos){
+        $textoArquitetura =  textos['home']['paragrafoArquitetura']
+        $('.text.arquitetura p').html($textoArquitetura)
+
+        $textoEsculturas =  textos['home']['paragrafoEsculturas']
+        $('.text.esculturas p').html($textoEsculturas)
+        
+    }
+
+    
+</script>
 
 </html>
