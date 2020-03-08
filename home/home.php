@@ -21,7 +21,7 @@
         <h2 class="intro-subtitle">Redesenhada</h2>
 
         <div class="scroll-info">
-            <img src="scroll-icon.png" alt="">
+            <img src="images/scroll-icon.png" alt="">
             <small>Scroll</small>
         </div>
     </div>
