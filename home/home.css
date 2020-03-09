@@ -207,7 +207,9 @@ font-family: 'Merriweather', serif;
     font-family: 'Playfair Display', serif;
 }
 
-
+.vestibulares-screen a{
+    text-transform: none;
+}
 
 .icons-vestib-container{
     display: flex;
@@ -236,7 +238,7 @@ font-family: 'Merriweather', serif;
 
 
 /* tentativa de fazer um carrosel */
-/* .carousel-container{
+.carousel-container{
     position: relative;
     display: flex;
 }
@@ -257,4 +259,4 @@ font-family: 'Merriweather', serif;
 }
 .in-right{
     transform: scaleX(200px);
-} */
+}
