@@ -51,8 +51,17 @@ font-family: 'Merriweather', serif;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    animation: scroll 1.2s infinite ease-out;
 }
 
+@keyframes scroll{
+    0%{
+        margin-top: 5%;
+    }
+    100%{
+        margin-top: 6%;
+    }
+}
 .scroll-info small {
     color: white;
     font-size: 15px;
@@ -63,47 +72,6 @@ font-family: 'Merriweather', serif;
     width: 40px;
 
 }
-
-
-
-/* 
-.second-screen{
-    width: 100%;
-    height: 100vh;
-    background-color: rgb(214, 49, 49);
-    padding: 30px 20px 30px 20px;
-}
-
-.sec-screen-title{
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 30px;
-
-}
-.text-flex{
-    display: flex;
-    flex-direction: row;
-    
-    justify-content: space-evenly;
-    width: 85%;
-    margin: auto;
-
-}
-.sec-screen-paragraph{
-    color: #f3f3f3;
-    font-family: 'Playfair Display', serif;
-    text-align: justify;
-    width: 40%;
-    font-size: 20px;
-} */
-
-
-
-
-
 
 .arq-esc-screen {
     width: 100%;
@@ -216,9 +184,10 @@ font-family: 'Merriweather', serif;
 
 .vestibulares-screen {
     width: 100%;
-    height: 100vh;
+    
     background-color: #f5b038;
     padding: 30px 20px;
+    
     
 }
 
@@ -237,6 +206,9 @@ font-family: 'Merriweather', serif;
     text-align: center;
     font-family: 'Playfair Display', serif;
 }
+
+
+
 .icons-vestib-container{
     display: flex;
     flex-direction: row;
@@ -245,9 +217,44 @@ font-family: 'Merriweather', serif;
     align-items: flex-end;
     width: 90%;
     max-width: 1500px;
-    margin:30px auto 30px auto;
+    margin:50px auto 30px auto;
 }
 .icons-vestib-container img{
     height: 170px;
+    margin: 5px;
 
 }
+.button-vestibular{
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 25px;
+    
+}
+
+
+/* tentativa de fazer um carrosel */
+/* .carousel-container{
+    position: relative;
+    display: flex;
+}
+.slide{
+    display: inline-block;
+    height: 300px;
+    transform: scale(0.7);
+    transition: 1s;
+    
+}
+.slide img{
+    height: 300px;
+}
+
+.active-card{
+    transform: scale(1);
+    transition: 1s;
+}
+.in-right{
+    transform: scaleX(200px);
+} */

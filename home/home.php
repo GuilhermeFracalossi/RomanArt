@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RomanArt - Home</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
     <link rel="stylesheet" href="home.css">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,900|Playfair+Display:400,700,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
@@ -67,6 +69,9 @@
         </div>
 
     </div>
+    <div class="pinturas-screen">
+        <div class="quadros-carrosel"></div>
+    </div>
 
     <div class="vestibulares-screen">
         <h2>Conteúdo dos principais vestibulares</h2>
@@ -80,18 +85,31 @@
 
         </div>
 
-        <button class="buttons-vest">Acesse</button>
+        <div class="text-center"><button class="button-vestibular">Acesse</button></div>
+
+
     </div>
 
     <div class="famous-pictures-container">
         <!-- tres quadro em um carrosel, semelhante ao modelo do egito, informacoes aparecem com um slide-up vindo de baixo no quadro selecionado-->
+        <div class="carousel-container">
+            <div class="slide" data-slide='1'>
+                <img src="images/quadro1.jpg">
+            </div>
+            <div class="slide active-card" data-slide='2'>
+                <img src="images/quadro2.jpg">
+            </div>
+            <div class="slide">
+                <img src="images/quadro3.jpg" data-slide='3'>
+            </div>
 
-    </div>
+        </div>
 
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
 
 
 <script>
@@ -111,20 +129,21 @@
         $('.text.esculturas p').html(textoEsculturas)
 
     }
+    // var activeSlide = 2
 
+    // function carousel() {
+    //     $('.next').click(function() {
 
-    // function changeButtonIcon() {
-    //     $('.access-button').mouseover(function(){
-    //         console.log('entra')
-    //     })
-    //     $('.access-button').mouseout(function(){
-    //         console.log('sai')
+    //         $(`.slide[data-slide=${activeSlide}]`).addClass('out-right').removeClass('active-card')
+
+    //         activeSlide - 1 == 0 ? activeSlide = 3 : activeSlide--
+    //         console.log(activeSlide)
+    //         $(`.slide[data-slide=${activeSlide}]`).addClass('active-card in-right')
+
     //     })
     // }
-
     // $(function() {
-    //     changeButtonIcon()
-    //     console.log('oi')
+    //     carousel()
     // })
 </script>
 
