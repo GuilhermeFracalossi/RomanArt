@@ -17,7 +17,7 @@ font-family: 'Merriweather', serif;
 
 	padding: 20vh 20px 30px 20px;
 
-	background: url('images/introRed4.jpg');
+	background: url('images/introRed5.jpg');
 	background-position: center;
 	background-size: cover;
 	z-index: -1;
@@ -76,7 +76,9 @@ font-family: 'Merriweather', serif;
 .arq-esc-screen {
 	width: 100%;
 	min-height: 100vh;
-	background-color: #b52438;
+    /* background-color: #b52438; */
+    background: rgb(197, 31, 56);
+    
 }
 
 .arq-esc-screen h2 {
