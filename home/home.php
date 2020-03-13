@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RomanArt - Home</title>
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="home.css">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,900|Playfair+Display:400,700,900&display=swap" rel="stylesheet">
@@ -73,9 +73,13 @@
         <h2>Pinturas</h2>
 
         <div class="carousel">
-            <a class="carousel-item" href="#one!"><img src="images/quadro1.jpg"></a>
+            <a class="carousel-item" href="#one!">
+                <img src="images/quadro1.jpg">
+                
+                
+            </a>
             <a class="carousel-item" href="#one!"><img src="images/quadro2.jpg"></a>
-            <a class="carousel-item" href="#one!"><img src="images/quadro1.jpg"></a>
+        
 
             <a class="carousel-item" href="#three!"><img src="images/quadro3.jpg"></a>
 
@@ -95,8 +99,8 @@
             <img src="images/ufrgs.png" alt="">
 
         </div>
-        <div class="text-center">
-            <a href="../vestibulares/vestibulares.php" class="text-center">
+        <div class="center-align">
+            <a href="../vestibulares/vestibulares.php">
                 <button class="button-vestibular">Acesse</button>
             </a>
         </div>
@@ -105,7 +109,7 @@
 
 
     <!-- tres quadro em um carrosel, semelhante ao modelo do egito, informacoes aparecem com um slide-up vindo de baixo no quadro selecionado-->
-    
+
 
 </body>
 
@@ -118,8 +122,14 @@
 
 <script>
     $(document).ready(function() {
-        $('.carousel').carousel();
+        $('.carousel').carousel({
+            dist: -60,
+            numVisible: 3,
+            noWrap: true
+        });
+
     });
+ 
 </script>
 
 </html>

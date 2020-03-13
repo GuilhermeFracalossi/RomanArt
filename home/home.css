@@ -142,6 +142,7 @@ font-family: 'Merriweather', serif;
 	width: 200px;
 	height: 70px;
 	width: 70px;
+	cursor: pointer;
 	position: relative;
 	font-family: 'Poppins', sans-serif;
 	border-radius: 50%;
@@ -221,14 +222,16 @@ font-family: 'Merriweather', serif;
 	font-size: 22px;
 	font-family: 'Poppins', sans-serif;
 	padding: 10px 25px;
+	cursor: pointer;
 }
 
 /* tentativa de fazer um carrosel */
 .pictures-screen{
 	width: 100%;
 	min-height: 100vh;
-	padding: 30px 20px;
-	background-color: #e46724;
+	padding: 30px 0px;
+	/* background-color: #e46724; */
+	background-color: #b31931;
 }
 .pictures-screen h2{
 	color: white;
@@ -236,15 +239,31 @@ font-family: 'Merriweather', serif;
 	font-weight: 700;
 	padding: 0px;
 	text-align: center;
+	margin-bottom: 100px;
 }
 .carousel{
 	height: 600px;
 	
 }
 .carousel .carousel-item{
-	width: 400px;
+	width: 500px;
+	height: 600px;
+	opacity: 1;
 }
 .carousel .carousel-item img{
 	width: 100%;
+}
+
+.image-text{
+	/* position: absolute;
+	bottom: 0; */
+	width: 100%;
+	/* font-size: 30px;
+	color: white;
+
+	font-family: 'Playfair Display', serif;
+	text-align: center;
+	height: 100px;
+	font-weight: bold; */
 }
 
