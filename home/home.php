@@ -98,14 +98,18 @@
             <div class="slide" data-slide='1'>
                 <img src="images/quadro1.jpg">
             </div>
+
             <div class="slide active-card" data-slide='2'>
                 <img src="images/quadro2.jpg">
             </div>
+
             <div class="slide">
                 <img src="images/quadro3.jpg" data-slide='3'>
             </div>
 
         </div>
+    <div class="next" onclick='next()'>></div>
+    <div class="prev"><</div>
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
@@ -147,6 +151,14 @@
     // $(function() {
     //     carousel()
     // })
+    function next(){
+        console.log('oi')
+        $('.slide').each(function(){
+
+            $(this).addClass('nextSlide')
+        })
+        
+    }
 </script>
 
 </html>
