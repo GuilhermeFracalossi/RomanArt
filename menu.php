@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,900|Playfair+Display:400,700,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -46,6 +46,10 @@
         font-family: 'Poppins', sans-serif;
     }
 
+    .logo-container a {
+        width: 200px;
+    }
+
     .menu-options {
         width: 600px;
         display: flex;
@@ -71,7 +75,7 @@
         background-color: #1d8cf8;
         box-shadow: none;
         color: #fff;
-       
+
         padding: 5px 15px !important;
         border-radius: 6px;
     }
@@ -81,10 +85,15 @@
 
     }
 
-    .homeMenu .menu-options a {
+
+    a {
+        outline: none;
+        text-decoration: none;
         color: white;
-
-
+    }
+    a:hover{
+        text-decoration: none;
+        color: white;
     }
 
     .defaultMenu {}
@@ -94,15 +103,18 @@
 
 
     <div class="menu-container homeMenu">
-        <div class="logo-container">
-            <img src="../logo-icon-white.png" alt="">
-            <h3>Artistory</h3>
-        </div>
+        <a href="../home/home.php">
+            <div class="logo-container">
+
+                <img src="../logo-icon-white.png" alt="">
+                <h3>Artistory</h3>
+            </div>
+        </a>
         <div class="menu-options">
             <a href="../arquitetura/arquitetura.php">Arquitetura</a>
             <a href="../pinturas/pinturas.php">Pinturas</a>
             <a href="../esculturas/esculturas.php">Esculturas</a>
-            <a href="../vestibulares/vestibulares.php">Vestibulares</a>
+            <a href="../cultura/cultura.php">Cultura</a>
             <a class="practice-button" href="../pratique/pratique.php">Pratique</a>
         </div>
     </div>

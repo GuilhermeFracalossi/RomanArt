@@ -86,7 +86,7 @@ font-family: 'Merriweather', serif;
 	font-weight: 900;
 	margin-bottom: 30px;
 	color: white;
-	font-family: 'Playfair Display', serif;
+	font-family: 'Poppins', sans-serif;
 }
 
 .arq-esc-screen p {
@@ -185,7 +185,7 @@ font-family: 'Merriweather', serif;
 	font-size: 40px;
 	font-weight: 900;
 	text-align: center;
-	font-family: 'Playfair Display', serif;
+	font-family: 'Poppins', sans-serif;
 }
 
 .vestibulares-screen h3 {
@@ -193,7 +193,7 @@ font-family: 'Merriweather', serif;
 	font-size: 30px;
 	font-weight: 700;
 	text-align: center;
-	font-family: 'Playfair Display', serif;
+	font-family: 'Poppins', sans-serif;
 }
 
 .vestibulares-screen a {
@@ -224,31 +224,27 @@ font-family: 'Merriweather', serif;
 }
 
 /* tentativa de fazer um carrosel */
-.carousel-container {
-	position: relative;
-    width: 100%;
-    overflow: hidden;
-    
+.pictures-screen{
+	width: 100%;
+	min-height: 100vh;
+	padding: 30px 20px;
+	background-color: #e46724;
+}
+.pictures-screen h2{
+	color: white;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	padding: 0px;
+	text-align: center;
+}
+.carousel{
+	height: 600px;
+	
+}
+.carousel .carousel-item{
+	width: 400px;
+}
+.carousel .carousel-item img{
+	width: 100%;
+}
 
-    
-}
-.slide {
-	display: inline-block;
-	height: 300px;
-	transform: scale(0.7);
-    transition: 1s;
-    z-index: 5;
-}
-.slide img {
-	height: 300px;
-}
-
-.active-card {
-    transform: scale(1);
-    z-index: 10;
-
-	transition: 1s;
-}
-.nextSlide{
-    transform: translate(50%, 0px);
-}
