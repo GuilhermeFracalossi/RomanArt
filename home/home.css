@@ -17,7 +17,7 @@ font-family: 'Merriweather', serif;
 
 	padding: 20vh 20px 30px 20px;
 
-	background: url('images/introRed5.jpg');
+	background: url('images/introRed7.jpg');
 	background-position: center;
 	background-size: cover;
 	z-index: -1;
@@ -56,13 +56,16 @@ font-family: 'Merriweather', serif;
 	0% {
 		transform: translate(0px, 0px);
 	}
+
 	50% {
 		transform: translate(0px, 10px);
 	}
+
 	100% {
 		transform: translate(0px, 0px);
 	}
 }
+
 .scroll-info small {
 	color: white;
 	font-size: 15px;
@@ -76,9 +79,9 @@ font-family: 'Merriweather', serif;
 .arq-esc-screen {
 	width: 100%;
 	min-height: 100vh;
-    /* background-color: #b52438; */
-    background: rgb(197, 31, 56);
-    
+	/* background-color: #b52438; */
+	background: rgb(197, 31, 56);
+
 }
 
 .arq-esc-screen h2 {
@@ -139,9 +142,9 @@ font-family: 'Merriweather', serif;
 	border: 2px solid white;
 	background-color: transparent;
 	color: white;
-	width: 200px;
-	height: 70px;
 	width: 70px;
+	height: 70px;
+
 	cursor: pointer;
 	position: relative;
 	font-family: 'Poppins', sans-serif;
@@ -149,6 +152,7 @@ font-family: 'Merriweather', serif;
 	margin-top: 10px;
 	box-shadow: 0px 0px 0px 13px rgba(255, 255, 255, 0.3);
 }
+
 .access-button img {
 	position: absolute;
 	margin: auto;
@@ -161,23 +165,121 @@ font-family: 'Merriweather', serif;
 .access-button .button-img1 {
 	width: 30px;
 }
+
 .access-button .button-img2 {
 	width: 40px;
 	opacity: 0;
 }
-.access-button:hover > .button-img1 {
+
+.access-button:hover>.button-img1 {
 	opacity: 0;
 	transition: 0.4s;
 }
-.access-button:hover > .button-img2 {
+
+.access-button:hover>.button-img2 {
 	opacity: 1;
 	transition: 0.4s;
 }
 
+.pictures-screen {
+	width: 100%;
+	min-height: 100vh;
+	padding: 30px 0px;
+	background-color: #b31931;
+}
+
+.pictures-screen h2 {
+	color: white;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	padding: 0px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.pictures-screen p {
+	font-family: 'Poppins', sans-serif;
+	color: white;
+	text-align: center;
+	font-size: 17px;
+	padding: 5px 30px;
+	max-width: 1400px;
+	margin: 10px auto;
+}
+
+.carousel {
+	height: 670px;
+	margin-bottom: 10px;
+
+}
+
+.carousel .carousel-item {
+	width: 550px;
+	height: 650px;
+	opacity: 1;
+}
+
+.carousel .carousel-item img {
+	width: 100%;
+	cursor: pointer;
+	-webkit-box-shadow: 2px 15px 25px -10px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 2px 15px 25px -10px rgba(0, 0, 0, 0.75);
+	box-shadow: 2px 15px 25px -10px rgba(0, 0, 0, 0.75);
+}
+
+.acesse-rect {
+	border: 2px solid white;
+	background: transparent;
+	color: white;
+	font-size: 22px;
+	font-family: 'Poppins', sans-serif;
+	padding: 10px 25px;
+	cursor: pointer;
+	width: 170px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+	height: 65px;
+}
+
+.acesse-rect img {
+	width: 120px;
+
+}
+
+.acesse-rect.pictures img {
+	opacity: 1;
+	transition: 0.2s;
+
+	position: absolute;
+}
+
+.acesse-rect.pictures p {
+	opacity: 0;
+	transition: 0.4s;
+	padding: 0px;
+	margin: 0px;
+	position: absolute;
+	font-size: 23px;
+
+}
+
+.acesse-rect.pictures:hover>p {
+	opacity: 1;
+}
+
+.acesse-rect.pictures:hover>img {
+	display: none;
+}
+
+
+
 .vestibulares-screen {
 	width: 100%;
 
-	background-color: #f5b038;
+	background-color: #ffa739;
 	padding: 30px 20px;
 }
 
@@ -211,59 +313,8 @@ font-family: 'Merriweather', serif;
 	max-width: 1500px;
 	margin: 50px auto 30px auto;
 }
+
 .icons-vestib-container img {
 	height: 170px;
 	margin: 5px;
 }
-.button-vestibular {
-	border: 2px solid white;
-	background: transparent;
-	color: white;
-	font-size: 22px;
-	font-family: 'Poppins', sans-serif;
-	padding: 10px 25px;
-	cursor: pointer;
-}
-
-/* tentativa de fazer um carrosel */
-.pictures-screen{
-	width: 100%;
-	min-height: 100vh;
-	padding: 30px 0px;
-	/* background-color: #e46724; */
-	background-color: #b31931;
-}
-.pictures-screen h2{
-	color: white;
-	font-family: 'Poppins', sans-serif;
-	font-weight: 700;
-	padding: 0px;
-	text-align: center;
-	margin-bottom: 100px;
-}
-.carousel{
-	height: 600px;
-	
-}
-.carousel .carousel-item{
-	width: 500px;
-	height: 600px;
-	opacity: 1;
-}
-.carousel .carousel-item img{
-	width: 100%;
-}
-
-.image-text{
-	/* position: absolute;
-	bottom: 0; */
-	width: 100%;
-	/* font-size: 30px;
-	color: white;
-
-	font-family: 'Playfair Display', serif;
-	text-align: center;
-	height: 100px;
-	font-weight: bold; */
-}
-
