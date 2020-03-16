@@ -10,9 +10,14 @@
 </head>
 
 <style>
+html, body{
+    margin: 0px;
+    padding: 0px;
+}
     .menu-container {
         position: absolute;
         width: 100%;
+        box-sizing: border-box;
         height: 75px;
         margin: 0px;
         display: flex;
@@ -96,7 +101,7 @@
         color: white;
     }
 
-    .defaultMenu {}
+  
 </style>
 
 <body>
