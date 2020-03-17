@@ -24,13 +24,29 @@
 
     </div>
 
-    <div class="texto-container">
-        <h2>Origem</h2>
+    <div class="main-container">
+
 
         <div class="text-container">
-            <p>
-                O que se possui de obras e conhecimento sobre as pinturas romanas, infelizmente, se restringe à duas cidades: Pompeia e Herculano, que foram soterradas pela explosão do vulcão Vesúvio, em 79 d.C. 
+            <h2>Origem</h2>
+            <p class="plain-text">
+                O que se possui de obras e conhecimento sobre as pinturas romanas, infelizmente, se restringe à duas cidades: Pompeia e Herculano, que foram soterradas pela explosão do vulcão Vesúvio, em 79 d.C.
                 As cinzas e o magma, apesar de terem arrasado boa parte da cidade, permitiu a preservação de algumas edificações, mantendo em boa qualidade a arte em seu interior.
+            </p>
+
+            <img src="images/pompeia.jpg" class="text-photo">
+            <p class="image-description">
+                Cidade de Pompeia atualmente, com o vulcão Vesúvio ao fundo
+
+            </p>
+        </div>
+
+        <div class="text-container">
+            <h2>Estilos</h2>
+            <h3>Segundo estilo</h3>
+            <p class="plain-text">
+                Também chamado de arquitetônico, se desenvolveu a partir de 80 a.C. É marcado por uma união da pintura com a arquitetura: as obras adotavam perspectiva, passavam ilusão de movimento, sendo planejadas juntamente com o cômodo para dar uma impressão de janela, 
+                de vista do mundo exterior. Ocupavam muitas vezes toda uma sala, utilizando de cenários complexos para disposição e harmonia das cenas.
             </p>
         </div>
 
