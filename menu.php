@@ -16,6 +16,7 @@ html, body{
 }
     .menu-container {
         position: absolute;
+        z-index: 10;
         width: 100%;
         box-sizing: border-box;
         height: 75px;
