@@ -11,6 +11,7 @@
    <link rel="stylesheet" href="svgAnimation.css">
    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,900|Playfair+Display:400,700,900&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Rubik:300&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -24,22 +25,23 @@
       <ul class="itens-titles">
          <li>Resumo</li>
          <li>Origem</li>
-         <li class="menu-arrow-down-subtitles">Estilos</li>
-         <ul class="subtitles">
+         <li class="arrow">Estilos <img src="images/arrow-menu-content.svg"></li>
+         <ul class="sub-titles">
             <li>Primeiro estilo</li>
             <li>Segundo estilo</li>
             <li>Terceiro estilo</li>
             <li>Quarto estilo</li>
          </ul>
          <li>Materiais</li>
-         <li class="menu-arrow-down-subtitles">Gêneros</li>
-         <ul class="subtitles">
-            <li></li>
-            <li>Segundo estilo</li>
-            <li>Terceiro estilo</li>
-            <li>Quarto estilo</li>
+         <li class="arrow">Gêneros <img src="images/arrow-menu-content.svg"></li>
+         <ul class="sub-titles">
+            <li>Retratos</li>
+            <li>Paisagens</li>
+            <li>Arquitetura</li>
+            <li>Triunfais</li>
          </ul>
-         <li class="menu-arrow-down-subtitles">Influências</li>
+         <li>Obras</li>
+         <li>Influências</li>
 
       </ul>
    </div>
@@ -244,28 +246,51 @@
 <script>
    // AOS.init();
 
-   $(function(){
+   $(function() {
       verifyPageOffset()
+      openSubMenus()
    })
-   function verifyPageOffset(){
-      setInterval(function(){
-         if(window.pageYOffset == 0 ) hideMenuContent()
-      }, 100)
+
+   function openSubMenus(){
+      $('.itens-titles>li').click(function(){
+         let elementBelow = $(this).next()
+         if(elementBelow.hasClass('sub-titles')){
+            
+            elementBelow.toggle()
+            $(this).find('img').toggleClass('list-open')
+            
+         }
+         // if($(this).next()){
+         //    console.log('ae')
+         // }
+        
+      })
    }
    
+   function verifyPageOffset() {
+      setInterval(function() {
+         if (window.pageYOffset < 300) {
+            hideMenuContent()
+         }
+         if (window.pageYOffset > 700) {
+            showMenuContent()
+         }
+      }, 100)
+   }
+
    $(window).on('beforeunload', function() {
       $(window).scrollTop(0);
    });
 
-   var path = document.querySelectorAll('#pinturasSvg path')
+   var path = document.querySelectorAll('#background path')
    var text = ''
    var timeDelay = 0.01
    var timeAnimation = null
    var animation = 'fill'
    for (let index = 0; index < path.length; index++) {
       if (path[index].getTotalLength() < 100) timeAnimation = 1
-      else if (path[index].getTotalLength() > 2000) timeAnimation = 4
-      else timeAnimation = 3
+      else if (path[index].getTotalLength() > 2000) timeAnimation = 3
+      else timeAnimation = 2
 
       if ($(path[index]).attr('stroke') == '#ffc3b0') animation = 'fill1'
       if ($(path[index]).attr('stroke') == '#ffd6c4') animation = 'fill2'
@@ -276,20 +301,25 @@
       text += (`path:nth-child(${index+1}){ 
       stroke-dasharray: ${path[index].getTotalLength().toFixed(4)};
       stroke-dashoffset: ${path[index].getTotalLength().toFixed(4)};
-      animation: stroke-animation ${timeAnimation}s ease-in forwards ${timeDelay.toFixed(2)}, ${animation} 0.5s ease forwards ${timeAnimation}s;
+      animation: stroke-animation ${timeAnimation}s ease-in forwards ${timeDelay.toFixed(2)}, ${animation} 0.5s ease forwards 3s;
       animation-iteration-count: 1;
    }`)
 
       timeDelay += 0.01
 
    }
+
+
+  
    //SCROLL JACKING\
 
    var scrollDir
    let canScroll = true
    document.addEventListener('wheel', (event) => {
+      
       if (!canScroll) {
          return;
+         
       }
       canScroll = false
       setTimeout(() => {
@@ -307,7 +337,7 @@
 
             // scrollTop: $(hash).offset().top
             scrollTop: $('.main-container').offset().top
-         }, 600, showMenuContent(500))
+         }, 600)
 
       }
       if (scrollDir == -1 && window.pageYOffset < 950 && window.pageYOffset > 10) {
@@ -315,33 +345,34 @@
 
 
             scrollTop: $('.intro-container').offset().top
-         }, 600, hideMenuContent(500))
+         }, 600)
       }
    }
 
 
-   function showMenuContent(timeAnimation) {
-      
-      console.log('pau')
+   function showMenuContent() {
+
+
       $('.menu-content').css('display', 'flex')
       setTimeout(function() {
 
          $('.menu-content').css('opacity', 1)
-         
 
-      }, timeAnimation)
+      }, 500)
 
 
 
    }
 
-   function hideMenuContent(timeAnimation) {
+   function hideMenuContent() {
       $('.menu-content').css('opacity', 0)
       setTimeout(function() {
 
          $('.menu-content').css('display', 'none')
 
-      }, timeAnimation)
+      }, 500)
+
+
 
    }
 </script>

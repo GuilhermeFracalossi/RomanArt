@@ -9,7 +9,7 @@
 
 .menu-container {
 	opacity: 0;
-	animation: menuAwait 0.5s ease forwards 4.5s;
+	animation: menuAwait 0.4s ease forwards 3.5s;
 	animation-iteration-count: 1;
 }
 
@@ -22,7 +22,7 @@
 html,
 body {
 	height: 100%;
-	
+
 }
 
 
@@ -85,12 +85,15 @@ li {
 	flex-direction: column;
 	position: fixed;
 	opacity: 0;
-	transition: opacity 0.5s ease !important;
+	transition: opacity 0.4s ease !important;
 	height: 100%;
 	width: 300px;
 	padding: 20px 15px;
 	z-index: 100;
 	background-color: #f6f8fa;
+	-webkit-box-shadow: inset -10px 0px 22px -16px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: inset -10px 0px 22px -16px rgba(0, 0, 0, 0.75);
+	box-shadow: inset -10px 0px 22px -16px rgba(0, 0, 0, 0.75);
 }
 
 
@@ -107,33 +110,50 @@ li {
 	font-family: 'Poppins', 'sans-serif';
 	display: block;
 	cursor: pointer;
+	border-top: 1px solid rgb(209, 209, 209);
 	border-bottom: 1px solid rgb(209, 209, 209);
 	text-align: left;
 	font-weight: bold;
 	font-size: 15px;
-	padding: 20px 30px;
+	padding: 20px 20px 20px 30px;
 	text-transform: uppercase;
+	position: relative;
+	user-select: none;
+	-moz-user-select: none;
+	margin-top: -1px; /*trick to make borders collapse*/
 }
 
-.subtitles {
-	padding-left: 40px !important;
+.itens-titles>li.arrow{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 
 }
-
-.itens-titles>li:nth-child(1) {
-	border-top: 1px solid rgb(209, 209, 209);
+.itens-titles>li.arrow>img{
+	width: 15px;
+	height: 15px;
+	transform: rotate(180deg);
+}
+.list-open{
+	transform: rotate(90deg) !important;
+}
+.itens-titles>li:hover{
+	background: #ebecee;
 }
 
-.itens-titles>li:nth-child(5) {
-	border-top: 1px solid rgb(209, 209, 209);
+
+.sub-titles {
+	display: none;
 }
 
-.subtitles>li {
+.sub-titles>li {
 	font-size: 14px;
-	padding: 10px;
+	padding: 10px 10px 10px 40px;
 	font-family: 'Poppins', 'sans-serif';
 }
-
+.sub-titles>li:hover{
+	background: #ebecee;
+}
 .main-container {
 	width: 70%;
 	max-width: 1400px;
@@ -193,4 +213,3 @@ hr {
 }
 
 /* font-family: 'Poppins', sans-serif; */
-
