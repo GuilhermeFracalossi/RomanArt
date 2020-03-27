@@ -6,7 +6,16 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>RomanArt - Pinturas</title>
    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+   </script> -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
    <link rel="stylesheet" href="pinturas.css">
    <link rel="stylesheet" href="svgAnimation.css">
    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,900|Playfair+Display:400,700,900&display=swap" rel="stylesheet">
@@ -14,38 +23,11 @@
    <link href="https://fonts.googleapis.com/css?family=Rubik:300&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".menu-content" onresize="updatePageHeight()">
 
    <?php
    include "../menu.php";
    ?>
-   <div class="menu-content">
-      <h2>Pinturas</h2>
-
-      <ul class="itens-titles">
-         <li>Resumo</li>
-         <li>Origem</li>
-         <li class="arrow">Estilos <img src="images/arrow-menu-content.svg"></li>
-         <ul class="sub-titles">
-            <li>Primeiro estilo</li>
-            <li>Segundo estilo</li>
-            <li>Terceiro estilo</li>
-            <li>Quarto estilo</li>
-         </ul>
-         <li>Materiais</li>
-         <li class="arrow">Gêneros <img src="images/arrow-menu-content.svg"></li>
-         <ul class="sub-titles">
-            <li>Retratos</li>
-            <li>Paisagens</li>
-            <li>Arquitetura</li>
-            <li>Triunfais</li>
-         </ul>
-         <li>Obras</li>
-         <li>Influências</li>
-
-      </ul>
-   </div>
-
    <div class="intro-container">
       <svg id="pinturasSvg" width="404" height="81" viewBox="0 0 404 81" fill="none" xmlns="http://www.w3.org/2000/svg">
          <path stroke='#e24252' stroke-width='2' d="M28.2 50.4V67.4C28.2 70.2 28.4667 72.2333 29 73.5C29.6 74.7667 30.6333 75.6333 32.1 76.1C33.6333 76.5 36.0333 76.7 39.3 76.7V79C30.3 78.8 23.4333 78.7 18.7 78.7C15.5667 78.7 11.2 78.7667 5.6 78.9L0.8 79V77C2.93333 76.8667 4.46667 76.6 5.4 76.2C6.4 75.8 7.06667 75.0333 7.4 73.9C7.73333 72.7667 7.9 70.9333 7.9 68.4V18.8C7.9 16.2667 7.7 14.4333 7.3 13.3C6.96667 12.1667 6.33333 11.4 5.4 11C4.46667 10.6 2.93333 10.3333 0.8 10.2V8.2C4.6 8.4 10.3333 8.5 18 8.5L29.5 8.4C30.8333 8.33333 32.3667 8.3 34.1 8.3C43.9667 8.3 51.4333 10.1 56.5 13.7C61.6333 17.2333 64.2 22 64.2 28C64.2 31.6667 63.2 35.2 61.2 38.6C59.2 41.9333 55.8 44.7333 51 47C46.2 49.2667 39.8333 50.4 31.9 50.4H28.2ZM33.6 10.2C32.0667 10.2 30.9 10.4333 30.1 10.9C29.3667 11.3667 28.8667 12.2 28.6 13.4C28.3333 14.6 28.2 16.4 28.2 18.8V48.4H30.9C35.5667 48.4 38.7667 46.6667 40.5 43.2C42.3 39.7333 43.2 35.0333 43.2 29.1C43.2 22.6333 42.4667 17.8667 41 14.8C39.5333 11.7333 37.0667 10.2 33.6 10.2ZM81.8734 0.799994C85.3401 0.799994 88.0068 1.53333 89.8734 2.99999C91.8068 4.46666 92.7734 6.6 92.7734 9.4C92.7734 12.2 91.8068 14.3333 89.8734 15.8C88.0068 17.2667 85.3401 18 81.8734 18C78.3401 18 75.6401 17.2667 73.7734 15.8C71.9068 14.3333 70.9734 12.2 70.9734 9.4C70.9734 6.6 71.9068 4.46666 73.7734 2.99999C75.6401 1.53333 78.3401 0.799994 81.8734 0.799994ZM91.4734 69.7C91.4734 72.4333 91.8734 74.3333 92.6734 75.4C93.5401 76.4 95.0068 76.9 97.0734 76.9V79C89.8734 78.7333 85.1401 78.6 82.8734 78.6C80.6068 78.6 75.6068 78.7333 67.8734 79V76.9C69.9401 76.9 71.3734 76.4 72.1734 75.4C73.0401 74.3333 73.4734 72.4333 73.4734 69.7V38C73.4734 34.9333 73.0401 32.7 72.1734 31.3C71.3734 29.9 69.9401 29.2 67.8734 29.2V27.1C70.0068 27.3 72.0734 27.4 74.0734 27.4C81.0068 27.4 86.8068 26.9333 91.4734 26V69.7ZM140.381 25.7C145.715 25.7 149.481 27.0333 151.681 29.7C152.681 30.9 153.415 32.5333 153.881 34.6C154.348 36.6 154.581 39.2667 154.581 42.6V69.7C154.581 72.4333 154.981 74.3333 155.781 75.4C156.648 76.4 158.115 76.9 160.181 76.9V79C152.981 78.7333 148.315 78.6 146.181 78.6C143.915 78.6 139.181 78.7333 131.981 79V76.9C133.715 76.9 134.915 76.4 135.581 75.4C136.248 74.3333 136.581 72.4333 136.581 69.7V37.2C136.581 35.0667 136.181 33.5 135.381 32.5C134.648 31.4333 133.415 30.9 131.681 30.9C129.748 30.9 128.048 31.6 126.581 33C125.181 34.3333 124.481 36.0333 124.481 38.1V69.7C124.481 72.4333 124.815 74.3333 125.481 75.4C126.148 76.4 127.348 76.9 129.081 76.9V79C122.415 78.7333 118.015 78.6 115.881 78.6C113.615 78.6 108.615 78.7333 100.881 79V76.9C102.948 76.9 104.381 76.4 105.181 75.4C106.048 74.3333 106.481 72.4333 106.481 69.7V38C106.481 34.9333 106.048 32.7 105.181 31.3C104.381 29.9 102.948 29.2 100.881 29.2V27.1C103.015 27.3 105.081 27.4 107.081 27.4C114.015 27.4 119.815 26.9333 124.481 26V33.2C127.481 28.2 132.781 25.7 140.381 25.7ZM186.481 27.1H196.281V29.1H186.481V70.6C186.481 71.9333 186.715 72.8667 187.181 73.4C187.648 73.9333 188.415 74.2 189.481 74.2C190.281 74.2 191.181 73.9667 192.181 73.5C193.181 73.0333 194.081 72.3 194.881 71.3L196.381 72.5C193.315 77.7667 188.581 80.4 182.181 80.4C177.581 80.4 174.148 79.2667 171.881 77C170.481 75.6 169.548 73.8667 169.081 71.8C168.681 69.7333 168.481 66.8333 168.481 63.1V29.1H160.881V27.1H168.481V15.3C172.081 15.3 175.315 14.9667 178.181 14.3C181.115 13.5667 183.881 12.4333 186.481 10.9V27.1ZM251.042 68.1C251.042 71.1667 251.442 73.4 252.242 74.8C253.109 76.2 254.576 76.9 256.642 76.9V79C254.576 78.8 252.509 78.7 250.442 78.7C243.509 78.7 237.709 79.1667 233.042 80.1V72.9C230.042 77.9 224.742 80.4 217.142 80.4C211.809 80.4 208.042 79.0667 205.842 76.4C204.842 75.2 204.109 73.6 203.642 71.6C203.176 69.5333 202.942 66.8333 202.942 63.5V38C202.942 34.9333 202.509 32.7 201.642 31.3C200.842 29.9 199.409 29.2 197.342 29.2V27.1C199.409 27.3 201.476 27.4 203.542 27.4C210.476 27.4 216.276 26.9333 220.942 26V68.9C220.942 71.0333 221.309 72.6333 222.042 73.7C222.842 74.7 224.109 75.2 225.842 75.2C227.776 75.2 229.442 74.5333 230.842 73.2C232.309 71.8 233.042 70.0667 233.042 68V38C233.042 34.9333 232.609 32.7 231.742 31.3C230.942 29.9 229.509 29.2 227.442 29.2V27.1C229.509 27.3 231.576 27.4 233.642 27.4C240.576 27.4 246.376 26.9333 251.042 26V68.1ZM297.049 25.7C300.316 25.7 302.649 26.7 304.049 28.7C305.516 30.7 306.249 33.0667 306.249 35.8C306.249 38.8 305.383 41.2 303.649 43C301.983 44.7333 299.783 45.6 297.049 45.6C294.183 45.6 291.983 44.9667 290.449 43.7C288.916 42.3667 288.149 40.6 288.149 38.4C288.149 34.4667 289.849 31.3667 293.249 29.1C292.049 29.1 290.983 29.3333 290.049 29.8C288.383 30.5333 286.983 31.7333 285.849 33.4C284.716 35 284.149 36.7667 284.149 38.7V68.7C284.149 71.8333 284.783 74 286.049 75.2C287.383 76.3333 289.616 76.9 292.749 76.9V79C291.883 79 291.149 78.9667 290.549 78.9C283.549 78.7 278.883 78.6 276.549 78.6C274.483 78.6 269.849 78.7 262.649 78.9C262.116 78.9667 261.416 79 260.549 79V76.9C262.616 76.9 264.049 76.4 264.849 75.4C265.716 74.3333 266.149 72.4333 266.149 69.7V38C266.149 34.9333 265.716 32.7 264.849 31.3C264.049 29.9 262.616 29.2 260.549 29.2V27.1C262.683 27.3 264.749 27.4 266.749 27.4C273.683 27.4 279.483 26.9333 284.149 26V33.2C286.683 28.2 290.983 25.7 297.049 25.7ZM321.694 79.7C317.427 79.7 314.194 78.5667 311.994 76.3C309.86 73.9667 308.794 71.0667 308.794 67.6C308.794 64.6 309.56 62.1333 311.094 60.2C312.694 58.2 314.56 56.6667 316.694 55.6C318.827 54.5333 321.594 53.4333 324.994 52.3C328.594 51.1 331.227 50 332.894 49C334.56 48 335.394 46.6 335.394 44.8V35.9C335.394 33.7667 334.86 31.8667 333.794 30.2C332.727 28.5333 330.894 27.7 328.294 27.7C326.227 27.7 324.36 28.2667 322.694 29.4C324.96 30.2 326.627 31.4 327.694 33C328.827 34.5333 329.394 36.2667 329.394 38.2C329.394 40.8 328.46 42.9 326.594 44.5C324.794 46.0333 322.594 46.8 319.994 46.8C317.394 46.8 315.327 46 313.794 44.4C312.327 42.7333 311.594 40.6333 311.594 38.1C311.594 36.1 312.094 34.3667 313.094 32.9C314.094 31.4333 315.66 30.1 317.794 28.9C321.527 26.7667 326.86 25.7 333.794 25.7C337.46 25.7 340.627 26.0667 343.294 26.8C345.96 27.4667 348.227 28.7667 350.094 30.7C351.427 32.1 352.294 33.8667 352.694 36C353.16 38.0667 353.394 40.9667 353.394 44.7V71.5C353.394 73.1667 353.494 74.3 353.694 74.9C353.96 75.5 354.394 75.8 354.994 75.8C355.46 75.8 355.96 75.6667 356.494 75.4C357.027 75.0667 357.527 74.7 357.994 74.3L358.994 76C356.127 78.4667 352.027 79.7 346.694 79.7C342.694 79.7 339.894 79.0333 338.294 77.7C336.694 76.3 335.827 74.4333 335.694 72.1C332.56 77.1667 327.894 79.7 321.694 79.7ZM331.694 71.7C333.094 71.7 334.327 71.1333 335.394 70V48.9C334.794 49.9 333.694 51.2 332.094 52.8C330.294 54.5333 328.927 56.2333 327.994 57.9C327.06 59.5 326.594 61.7 326.594 64.5C326.594 69.3 328.294 71.7 331.694 71.7ZM382.819 25.7C385.419 25.7 387.852 26 390.119 26.6C392.452 27.1333 394.219 27.7333 395.419 28.4C396.152 28.8 396.752 29 397.219 29C398.619 29 399.452 27.9333 399.719 25.8H401.719C401.452 29.2667 401.319 35.2667 401.319 43.8H399.319C398.785 39.4 397.519 35.7 395.519 32.7C393.585 29.6333 390.752 28.1 387.019 28.1C385.352 28.1 383.952 28.6 382.819 29.6C381.685 30.6 381.119 31.9667 381.119 33.7C381.119 35.9 381.852 37.8667 383.319 39.6C384.785 41.2667 387.085 43.3333 390.219 45.8C390.352 45.8667 391.319 46.6333 393.119 48.1C396.852 51.1667 399.585 53.9 401.319 56.3C403.052 58.6333 403.919 61.5333 403.919 65C403.919 67.9333 403.019 70.6 401.219 73C399.419 75.3333 396.952 77.1667 393.819 78.5C390.752 79.7667 387.385 80.4 383.719 80.4C379.519 80.4 376.085 79.5667 373.419 77.9C372.285 77.3 371.352 76.8667 370.619 76.6C369.885 76.3333 369.152 76.2 368.419 76.2C367.152 76.2 366.219 77.3667 365.619 79.7H363.619C363.885 75.9 364.019 69.2333 364.019 59.7H366.019C366.619 65.1667 368.085 69.5667 370.419 72.9C372.752 76.2333 375.685 77.9 379.219 77.9C380.885 77.9 382.252 77.4333 383.319 76.5C384.452 75.5667 385.019 74.2 385.019 72.4C385.019 70.5333 384.619 68.8667 383.819 67.4C383.085 65.9333 382.152 64.6333 381.019 63.5C379.952 62.3 378.185 60.6 375.719 58.4C372.919 55.8 370.785 53.7333 369.319 52.2C367.852 50.6667 366.585 48.9 365.519 46.9C364.519 44.8333 364.019 42.5667 364.019 40.1C364.019 37.2333 364.885 34.7 366.619 32.5C368.352 30.3 370.652 28.6333 373.519 27.5C376.385 26.3 379.485 25.7 382.819 25.7Z" fill="#E24252" />
@@ -177,6 +159,66 @@
 
 
 
+
+   <div class="menu-content" data-spy="affix" data-offset-top="">
+
+      <h2>Pinturas</h2>
+
+      <ul class="itens-titles">
+
+         <a href="#resumo">
+            <li>Resumo</li>
+         </a>
+
+         <a href="#origem">
+            <li>Origem</li>
+         </a>
+         <a href="#origem">
+            <li class="arrow">Estilos 
+               <img src="images/arrow-menu-content.svg"></li></a>
+         <ul class="sub-titles">
+            <a href="#primeiro_estilo">
+               <li>Primeiro estilo</li>
+            </a>
+            <a href="#segundo_estilo">
+               <li>Segundo estilo</li>
+            </a>
+            <a href="#terceiro_estilo">
+               <li>Terceiro estilo</li>
+            </a>
+            <a href="#quarto_estilo">
+               <li>Quarto estilo</li>
+            </a>
+         </ul>
+         <a href="#materiais"><li>Materiais</li>
+         <li class="arrow">Gêneros <img src="images/arrow-menu-content.svg"></li>
+         <ul class="sub-titles">
+            <a href="#retratos">
+               <li>Retratos</li>
+            </a>
+            <a href="#paisagens">
+               <li>Paisagens</li>
+            </a>
+            <a href="#arquitetura">
+               <li>Arquitetura</li>
+            </a>
+            <a href="#triunfais">
+               <li>Triunfais</li>
+            </a>
+         </ul>
+         <a href="#obras">
+            <li>Obras</li>
+         </a>
+         <a href="#influencias">
+            <li>Influências</li>
+         </a>
+
+      </ul>
+
+   </div>
+
+   </div>
+
    <div class="main-container">
       <div class="text-container">
          <h2>Origem</h2>
@@ -232,94 +274,100 @@
 
 
    </div>
+
    <div class="text"></div>
+
 </body>
-<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
-</script>
-
-
-
 <script>
    // AOS.init();
 
    $(function() {
-      verifyPageOffset()
+      updatePageHeight()
       openSubMenus()
+      scrollToTitle()
    })
 
-   function openSubMenus(){
-      $('.itens-titles>li').click(function(){
-         let elementBelow = $(this).next()
-         if(elementBelow.hasClass('sub-titles')){
-            
-            elementBelow.toggle()
-            $(this).find('img').toggleClass('list-open')
-            
-         }
-         // if($(this).next()){
-         //    console.log('ae')
-         // }
-        
-      })
-   }
-   
-   function verifyPageOffset() {
-      setInterval(function() {
-         if (window.pageYOffset < 300) {
-            hideMenuContent()
-         }
-         if (window.pageYOffset > 700) {
-            showMenuContent()
-         }
-      }, 100)
-   }
 
    $(window).on('beforeunload', function() {
       $(window).scrollTop(0);
    });
 
-   var path = document.querySelectorAll('#background path')
-   var text = ''
-   var timeDelay = 0.01
-   var timeAnimation = null
-   var animation = 'fill'
-   for (let index = 0; index < path.length; index++) {
-      if (path[index].getTotalLength() < 100) timeAnimation = 1
-      else if (path[index].getTotalLength() > 2000) timeAnimation = 3
-      else timeAnimation = 2
+   function openSubMenus() {
+      $('.itens-titles>li').click(function() {
+         let elementBelow = $(this).next()
+         if (elementBelow.hasClass('sub-titles')) {
 
-      if ($(path[index]).attr('stroke') == '#ffc3b0') animation = 'fill1'
-      if ($(path[index]).attr('stroke') == '#ffd6c4') animation = 'fill2'
-      if ($(path[index]).attr('stroke') == '#ff9f89') animation = 'fill3'
-      if ($(path[index]).attr('stroke') == '#c74f5b') animation = 'fill4'
-      if ($(path[index]).attr('stroke') == '#fe7f6c') animation = 'fill5'
+            elementBelow.toggle()
+            $(this).find('img').toggleClass('list-open')
 
-      text += (`path:nth-child(${index+1}){ 
-      stroke-dasharray: ${path[index].getTotalLength().toFixed(4)};
-      stroke-dashoffset: ${path[index].getTotalLength().toFixed(4)};
-      animation: stroke-animation ${timeAnimation}s ease-in forwards ${timeDelay.toFixed(2)}, ${animation} 0.5s ease forwards 3s;
-      animation-iteration-count: 1;
-   }`)
+         }
+      })
+   }
 
-      timeDelay += 0.01
+   function updatePageHeight() {
+      let pageOffset = window.pageYOffset
+      let height = window.innerHeight
+      $('.menu-content').attr('data-offset-top', height)
+   }
 
+   function scrollToTitle() {
+      $("a").on('click', function(event) {
+         console.log('a')
+         if (this.hash !== "") {
+
+            event.preventDefault();
+
+            var hash = this.hash;
+
+            
+            // $('html, body').animate({
+            //    scrollTop: $(hash).offset().top
+            // }, 400, function() {
+            //    window.location.hash = hash;
+            // })
+         } 
+      })
    }
 
 
-  
+   // var path = document.querySelectorAll('#background path')
+   // var text = ''
+   // var timeDelay = 0.01
+   // var timeAnimation = null
+   // var animation = 'fill'
+   // for (let index = 0; index < path.length; index++) {
+   //    if (path[index].getTotalLength() < 100) timeAnimation = 1
+   //    else if (path[index].getTotalLength() > 2000) timeAnimation = 3
+   //    else timeAnimation = 2
+
+   //    if ($(path[index]).attr('stroke') == '#ffc3b0') animation = 'fill1'
+   //    if ($(path[index]).attr('stroke') == '#ffd6c4') animation = 'fill2'
+   //    if ($(path[index]).attr('stroke') == '#ff9f89') animation = 'fill3'
+   //    if ($(path[index]).attr('stroke') == '#c74f5b') animation = 'fill4'
+   //    if ($(path[index]).attr('stroke') == '#fe7f6c') animation = 'fill5'
+
+   //    text += (`path:nth-child(${index+1}){ 
+   //    stroke-dasharray: ${path[index].getTotalLength().toFixed(4)};
+   //    stroke-dashoffset: ${path[index].getTotalLength().toFixed(4)};
+   //    animation: stroke-animation ${timeAnimation}s ease-in forwards ${timeDelay.toFixed(2)}, ${animation} 0.5s ease forwards 3s;
+   //    animation-iteration-count: 1;
+   // }`)
+
+   //    timeDelay += 0.01
+
+   // }
+
+
+
    //SCROLL JACKING\
 
    var scrollDir
    let canScroll = true
    document.addEventListener('wheel', (event) => {
-      
+
       if (!canScroll) {
          return;
-         
+
       }
       canScroll = false
       setTimeout(() => {
