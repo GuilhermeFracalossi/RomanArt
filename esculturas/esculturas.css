@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.intro-container {
+    height: 100vh;
+    width: 100%;
+    background: url('images/background-dark.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+
+.esculturas-title {
+    font-size: 65px;
+    font-weight: 900;
+    position: absolute;
+    top: 8%;
+    left: 20%;
+    color: #da755e;
+    font-family: 'Playfair Display', serif;
+    /* font-family: 'Poppins', 'sans-serif'; */
+}
+
+.esculturas-cards-container {
+    display: flex;
+    cursor: pointer;
+    position: absolute;
+    top: 20%;
+    height: calc(80% - 40px);
+    width: 100%;
+    justify-content: space-between;
+    overflow-y: hidden;
+}
+
+.esculturas-cards-container::-webkit-scrollbar {
+    display: none;
+}
+
+.esculturas-cards-container {
+    -ms-overflow-style: none;
+}
+
+.escult-card {
+    margin: 20px 50px;
+}
+
+
+.escult-card p {
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: left;
+    font-family: 'Poppins', 'sans-serif';
+
+}
+
+.arrow-down{
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    animation: arrowDown 2s ease infinite;
+}
+
+
+
+@keyframes arrowDown {
+0% {
+    transform: translate(0, 0px);
+}
+
+50% {
+    transform: translate(0, 15px);
+}
+
+100% {
+    transform: translate(0, 0px);
+}
+
+}
